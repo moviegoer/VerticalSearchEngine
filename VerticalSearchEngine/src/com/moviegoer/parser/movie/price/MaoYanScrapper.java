@@ -6,6 +6,7 @@ public class MaoYanScrapper extends PriceScrapper{
 	public void Scrap() {
 		// TODO Auto-generated method stub
 		System.out.println(super.getEntryURL());
+		System.out.println(super.getOutputFile());
 	}
 	
 }

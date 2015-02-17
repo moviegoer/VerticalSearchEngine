@@ -1,5 +1,9 @@
 package com.moviegoer.parser.movie.price;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public abstract class PriceScrapper{
 	
 	//class member
@@ -49,6 +53,9 @@ public abstract class PriceScrapper{
 	}
 
 	public void setOutputFile(String outputFile) {
+		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+		Date date = new Date();
+		outputFile = dateFormat.format(date) + "_" + outputFile;
 		this.outputFile = outputFile;
 	}
 
